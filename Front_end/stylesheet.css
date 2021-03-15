@@ -1,0 +1,90 @@
+.banner {
+    width: 100%;
+    position: relative;
+  }
+
+/* --------------------------------------------------------Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #c5c7c5;
+  }
+  
+li a:hover {
+    background-color: #111;
+ }
+
+
+ /* ----------------------------------------------------------------------Contact Form */
+ input[type=text], input[type=email] {
+    width: 98%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+ label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  input[type=submit], #submit {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+  }
+
+  input[type=submit]:hover, #submit:hover {
+    background-color: #111;
+  }
+
+  fieldset{
+      display: auto;
+  }
+
+  /* ---------------------------------------------------------------------allproducts page */
+
+  #main{
+    text-align: center;
+    font-family: arial;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .square{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.63);
+    max-width: 300px;
+    margin: auto;
+    border-radius: 7px;
+    /* width: 20%; */
+  }
+
+  .pic{
+    max-width:300px;
+    max-height: auto;
+  }
