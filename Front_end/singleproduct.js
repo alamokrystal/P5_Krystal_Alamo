@@ -9,28 +9,29 @@ console.log(id)
 
 
 const URL = 'http://localhost:3000/api/furniture/'+id;
-let response = fetch(URL);
+// let response = fetch(URL);
 fetch(URL)
     .then(response => response.json())
     .then(data => {
-        makeCards(data);
+        console.log(data)
+        makeCard(data);
     })
     .catch(error => console.log(error));
 
 
 
-function makeCards(data){
-    for (let i=0; i < data.length; i++){
+function makeCard(data){
+        const card = document.createElement("section");
         const image = document.createElement('img');
-        image.setAttribute('src', data[i].imageUrl);
-        console.log(data[i]);
+        image.setAttribute('src', data.imageUrl);
+        console.log(data);
         const name = document.createElement('h2');
-        name.innerHTML = data[i].name;
+        name.innerHTML = data.name;
         const description = document.createElement('p');
-        description.innerHTML = data[i].description;
-        const options = handleOptions(data[i].varnish);
+        description.innerHTML = data.description;
+        const options = handleOptions(data.varnish);
         const price = document.createElement('p');
-        price.innerHTML = data[i].price;
+        price.innerHTML = data.price;
 
         card.appendChild(image);
         card.appendChild(name);
@@ -39,7 +40,6 @@ function makeCards(data){
         card.appendChild(price);
         main.appendChild(card);
 
-    }
 }
 
 function handleOptions(array){
